@@ -222,22 +222,22 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans  &kp JP_PLUS      &kp MINUS  &kp N7  &kp N8      &kp N9
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &kp JP_ASTERISK  &kp SLASH  &kp N4  &kp N5      &kp N6
-&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans        &kp JP_EQUAL  &kp N1  &kp N2      &kp N3
-&trans  &trans  &trans  &trans   &trans   &none    &trans  &trans        &trans     &kp N0  &kp PERIOD  &kp KP_ENTER
-                &trans  &trans   &trans   &trans   &trans  &trans        &trans     &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans  &kp JP_PLUS      &kp MINUS     &kp N7  &kp N8      &kp N9
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &kp JP_ASTERISK  &kp SLASH     &kp N4  &kp N5      &kp N6
+&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans           &kp JP_EQUAL  &kp N1  &kp N2      &kp N3
+&trans  &trans  &trans  &trans   &trans   &none    &trans  &trans           &trans        &kp N0  &kp PERIOD  &kp KP_ENTER
+                &trans  &trans   &trans   &trans   &trans  &trans           &trans        &trans
             >;
         };
 
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&trans  &kp JP_AT  &kp JP_LBRACE  &kp JP_RBRACE    &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_CARET    &kp EXCLAMATION  &kp JP_PIPE   &kp JP_BACKQUOTE       &trans          &bt BT_SEL 0
-&trans  &kp HASH     &kp JP_QUOTE         &kp JP_DQUOTE  &kp JP_LBRACKET      &kp JP_RBRACKET      &kp PERCENT  &kp JP_AMPERSAND    &kp JP_TILDE  &trans          &kp JP_UNDERSCORE  &bt BT_SEL 1
-&trans  &kp DOLLAR   &kp JP_COLON       &kp SEMICOLON      &kp LESS_THAN         &kp GREATER_THAN       &kp SLASH    &kp JP_YEN         &trans     &trans          &bt BT_CLR      &bt BT_SEL 2
-&trans  &trans       &trans          &trans             &trans                &trans                 &none        &trans           &trans     &bt BT_CLR_ALL  &bt BT_SEL 4    &bt BT_SEL 3
-                     &trans          &trans             &trans                &trans                 &trans       &trans           &trans     &trans
+&trans  &kp JP_AT   &kp JP_LBRACE  &kp JP_RBRACE  &kp JP_LPAREN    &kp JP_RPAREN     &kp JP_CARET  &kp EXCLAMATION   &kp JP_PIPE   &kp JP_BACKQUOTE  &trans             &bt BT_SEL 0
+&trans  &kp HASH    &kp JP_QUOTE   &kp JP_DQUOTE  &kp JP_LBRACKET  &kp JP_RBRACKET   &kp PERCENT   &kp JP_AMPERSAND  &kp JP_TILDE  &trans            &kp JP_UNDERSCORE  &bt BT_SEL 1
+&trans  &kp DOLLAR  &kp JP_COLON   &kp SEMICOLON  &kp LESS_THAN    &kp GREATER_THAN  &kp SLASH     &kp JP_YEN        &trans        &trans            &bt BT_CLR         &bt BT_SEL 2
+&trans  &trans      &trans         &trans         &trans           &trans            &none         &trans            &trans        &bt BT_CLR_ALL    &bt BT_SEL 4       &bt BT_SEL 3
+                    &trans         &trans         &trans           &trans            &trans        &trans            &trans        &trans
             >;
         };
 
@@ -257,11 +257,11 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &mo SCROLL_R_LAYER
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &mo 5
-                &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &mo SCROLL_R_LAYER
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &mo 5
+                   &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans
             >;
         };
 
