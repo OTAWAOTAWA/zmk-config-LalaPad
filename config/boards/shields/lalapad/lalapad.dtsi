@@ -109,7 +109,7 @@
 
         sensitivity = "2x";
 //        no-taps;
-        no-smoothing;
+//        no-smoothing;
         //absolute-mode;
     };
 };
