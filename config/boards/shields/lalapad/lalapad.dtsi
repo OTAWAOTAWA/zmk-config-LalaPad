@@ -111,6 +111,10 @@
 //        no-taps;
 //        no-smoothing;
         //absolute-mode;
+	gestures{
+		compatible = "zmk,gesture-config";
+		two-finger-tap = <ZMK_GESTURE_RIGHT_CLICK>;
+	};
     };
 };
 
