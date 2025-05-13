@@ -302,11 +302,11 @@
 
         US {
             bindings = <
-&lt 11 ESCAPE  &kp Q     &kp W      &kp E      &kp R     &kp T             &kp Y        &kp U     &kp I        &kp O     &kp P      &kp ASTERISK
-&kp TAB        &kp A     &kp S      &kp D      &kp F     &kp G             &kp H        &kp J     &kp K        &kp L     &kp MINUS  &kp PERCENT
-&kp LSHFT      &kp Z     &kp X      &kp C      &kp V     &kp B             &kp N        &lt 5 M   &lt 4 COMMA  &kp DOT   &kp UP     &kp QUESTION
-&kp LCTRL      &kp LGUI  &kp LALT   &kp SPACE  &kp DEL   &lt 1 LANGUAGE_2  &lt 2 LANG1  &kp BSPC  &kp RET      &kp LEFT  &kp DOWN   &kp RIGHT
-                         &kp RIGHT  &kp DOWN   &kp LEFT  &kp UP            &trans       &trans    &trans       &trans
+&lt 11 ESCAPE  &kp Q     &kp W      &kp E      &kp R     &kp T             &kp Y         &kp U     &kp I        &kp O     &kp P      &kp ASTERISK
+&kp TAB        &kp A     &kp S      &kp D      &kp F     &kp G             &kp H         &kp J     &kp K        &kp L     &kp MINUS  &kp PERCENT
+&kp LSHFT      &kp Z     &kp X      &kp C      &kp V     &kp B             &kp N         &lt 5 M   &lt 4 COMMA  &kp DOT   &kp UP     &kp QUESTION
+&kp LCTRL      &kp LGUI  &kp LALT   &kp SPACE  &kp DEL   &lt 9 LANGUAGE_2  &lt 10 LANG1  &kp BSPC  &kp RET      &kp LEFT  &kp DOWN   &kp RIGHT
+                         &kp RIGHT  &kp DOWN   &kp LEFT  &kp UP            &trans        &trans    &trans       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
@@ -314,21 +314,21 @@
 
         US_FN_NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &trans  &kp PLUS   &kp MINUS  &kp N7  &kp N8   &kp N9
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &kp ASTRK  &kp FSLH   &kp N4  &kp N5   &kp N6
+&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans     &kp EQUAL  &kp N1  &kp N2   &kp N3
+&trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans     &trans     &kp N0  &kp DOT  &kp RET
+                &trans  &trans   &trans   &trans   &trans  &trans     &trans     &trans
             >;
         };
 
         US_KIGOU {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp AT_SIGN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET    &kp EXCL              &kp PIPE   &kp GRAVE       &trans          &bt BT_SEL 0
+&trans  &kp HASH     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &kp AMPERSAND         &kp TILDE  &trans          &kp UNDERSCORE  &bt BT_SEL 1
+&trans  &kp DOLLAR   &kp COLON         &kp SEMICOLON      &kp LESS_THAN         &kp GREATER_THAN       &kp SLASH    &kp NON_US_BACKSLASH  &trans     &trans          &bt BT_CLR      &bt BT_SEL 2
+&trans  &trans       &trans            &trans             &trans                &trans                 &trans       &trans                &trans     &bt BT_CLR_ALL  &bt BT_SEL 4    &bt BT_SEL 3
+                     &trans            &trans             &trans                &trans                 &trans       &trans                &trans     &trans
             >;
         };
 
@@ -337,7 +337,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &tog 8  &tog 0  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &tog 8  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
