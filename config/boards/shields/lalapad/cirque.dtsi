@@ -30,11 +30,15 @@
     prevent_movement_during_tap;
     circular-scroll;
 
+    tap-time-threshold-ms = <150>;
+    slide-threshold-px = <10>;
+
     bindings = <
         &kp BTN_LEFT  //1本指タップ
         &kp BTN_RIGHT  //2本指タップ
         &none          //３本指　無効
     >;
+    slide-layer = <5>;
 };
 
 / {
