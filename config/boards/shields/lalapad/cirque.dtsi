@@ -29,6 +29,12 @@
     tap-detection;
     prevent_movement_during_tap;
     circular-scroll;
+
+    bindings = <
+        &kp BTN_LEFT  //1本指タップ
+        &kp BTN_RIGHT  //2本指タップ
+        &none          //３本指　無効
+    >;
 };
 
 / {
