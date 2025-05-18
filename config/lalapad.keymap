@@ -222,14 +222,14 @@
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(I) &kp N &kp T &kp E &kp L &kp AT &kp ENTER>;
+            bindings = <&kp LS(I) &kp N &kp T &kp E &kp L &kp JP_AT &kp ENTER>;
             label = "LOGIN";
         };
 
         mail: mail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp T &kp S &kp U &kp T &kp O &kp M &kp U &kp UNDER &kp O &kp O &kp T &kp A &kp W &kp A &kp AT &kp T &kp O &kp M &kp O &kp E &kp G &kp A &kp W &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            bindings = <&kp T &kp S &kp U &kp T &kp O &kp M &kp U &kp LS(0x87) &kp O &kp O &kp T &kp A &kp W &kp A &kp JP_AT &kp T &kp O &kp M &kp O &kp E &kp G &kp A &kp W &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "MAIL";
         };
     };
