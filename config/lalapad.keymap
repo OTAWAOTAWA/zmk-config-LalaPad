@@ -200,11 +200,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        behavior_right_click: behavior_right_click {
-            compatible = "zmk,behavior-sensor-trigger";
-            label = "RIGHT_CLICK";
-            bindings = <&kp BTN_RIGHT>;
-        };
+//        behavior_right_click: behavior_right_click {
+//            compatible = "zmk,behavior-sensor-trigger";
+//            label = "RIGHT_CLICK";
+//            bindings = <&kp BTN_RIGHT>;
+//        };
     };
 
 //    sensors {
