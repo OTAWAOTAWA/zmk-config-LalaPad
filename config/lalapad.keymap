@@ -200,23 +200,39 @@
             bindings = <&kp>, <&kp>;
         };
 
-//        behavior_right_click: behavior_right_click {
-//            compatible = "zmk,behavior-sensor-trigger";
-//            label = "RIGHT_CLICK";
-//            bindings = <&kp BTN_RIGHT>;
-//        };
+        //        behavior_right_click: behavior_right_click {
+        //            compatible = "zmk,behavior-sensor-trigger";
+        //            label = "RIGHT_CLICK";
+        //            bindings = <&kp BTN_RIGHT>;
+        //        };
     };
 
-//    sensors {
-//        glidepoint: glidepoint@1 {
-//            compatible = "cirque,pinnacle";
-//            status = "okay";
-//            reg = <1>;
-//            spi-max-frequency = <1000000>;
-//            dr-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>;
-//            trigger-behavior = <&behavior_right_click>;
-//        };
-//    };
+    //    sensors {
+    //        glidepoint: glidepoint@1 {
+    //            compatible = "cirque,pinnacle";
+    //            status = "okay";
+    //            reg = <1>;
+    //            spi-max-frequency = <1000000>;
+    //            dr-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>;
+    //            trigger-behavior = <&behavior_right_click>;
+    //        };
+    //    };
+
+    macros {
+        login: login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(I) &kp N &kp T &kp E &kp L &kp AT &kp ENTER>;
+            label = "LOGIN";
+        };
+
+        mail: mail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp S &kp U &kp T &kp O &kp M &kp U &kp UNDER &kp O &kp O &kp T &kp A &kp W &kp A &kp AT &kp T &kp O &kp M &kp O &kp E &kp G &kp A &kp W &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            label = "MAIL";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -228,9 +244,20 @@
             bindings = <
 &lt 11 ESCAPE  &kp Q         &kp W            &kp E           &kp R           &kp T        &kp Y          &kp U          &kp I            &kp O       &kp P      &kp JP_ASTERISK
 &kp TAB        &kp A         &kp S            &kp D           &kp F           &kp G        &kp H          &kp J          &kp K            &kp L       &kp MINUS  &kp PERCENT
-&kp LSHFT      &kp Z         &kp X            &kp C           &kp V           &kp B        &kp N          &lt 5 M        &lt 4 COMMA      &kp PERIOD  &kp UP     &kp QUESTION
-&kp LCTRL      &kp LEFT_WIN  &kp LEFT_ALT     &kp SPACE       &kp DEL         &lt 1 LANG2  &lt 2 LANG1    &kp BACKSPACE  &kp RET          &kp LEFT    &kp DOWN   &kp RIGHT
+&kp LSHFT      &kp Z         &kp X            &kp C           &kp V           &kp B        &kp N          &lt 5 M        &lt 1 COMMA      &kp PERIOD  &kp UP     &kp QUESTION
+&kp LCTRL      &kp LEFT_WIN  &kp LEFT_ALT     &kp SPACE       &kp DEL         &lt 2 LANG2  &lt 3 LANG1    &kp BACKSPACE  &kp RET          &kp LEFT    &kp DOWN   &kp RIGHT
                              &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp LEFT_ARROW  &kp UP       &allow_pageup  &allow_home    &allow_pagedown  &allow_end
+            >;
+        };
+
+        MOUSE_R_LAYER {
+            display-name = "mouse_r_layer";
+            bindings = <
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &mo 5
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &mo 5
+                   &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans
             >;
         };
 
@@ -241,7 +268,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6        &trans  &kp JP_PLUS      &kp MINUS     &kp N7  &kp N8      &kp N9
 &kp F7  &kp F8  &kp F9           &kp F10         &kp F11   &kp F12       &trans  &kp JP_ASTERISK  &kp SLASH     &kp N4  &kp N5      &kp N6
-&trans  &trans  &trans           &trans          &trans    &trans        &trans  &trans           &kp JP_EQUAL  &kp N1  &kp N2      &kp N3
+&trans  &login  &mail            &trans          &trans    &trans        &trans  &trans           &kp JP_EQUAL  &kp N1  &kp N2      &kp N3
 &trans  &trans  &trans           &trans          &trans    &none         &trans  &trans           &trans        &kp N0  &kp PERIOD  &kp KP_ENTER
                 &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp LEFT  &kp UP_ARROW  &trans  &trans           &trans        &trans
             >;
@@ -273,17 +300,6 @@
             >;
         };
 
-        MOUSE_R_LAYER {
-            display-name = "mouse_r_layer";
-            bindings = <
-&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &mo SCROLL_R_LAYER
-&trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &mo 5
-                   &trans     &trans     &trans  &trans  &trans  &trans     &trans     &trans
-            >;
-        };
-
         SCROLL_R_LAYER {
             display-name = "scroll_r_layer";
             bindings = <
@@ -298,11 +314,11 @@
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo SCROLL_R_LAYER  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 5   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -321,7 +337,7 @@
             bindings = <
 &lt 11 ESCAPE  &kp Q     &kp W      &kp E      &kp R     &kp T             &kp Y         &kp U     &kp I        &kp O     &kp P      &kp ASTERISK
 &kp TAB        &kp A     &kp S      &kp D      &kp F     &kp G             &kp H         &kp J     &kp K        &kp L     &kp MINUS  &kp PERCENT
-&kp LSHFT      &kp Z     &kp X      &kp C      &kp V     &kp B             &kp N         &lt 5 M   &lt 4 COMMA  &kp DOT   &kp UP     &kp QUESTION
+&kp LSHFT      &kp Z     &kp X      &kp C      &kp V     &kp B             &kp N         &lt 5 M   &lt 1 COMMA  &kp DOT   &kp UP     &kp QUESTION
 &kp LCTRL      &kp LGUI  &kp LALT   &kp SPACE  &kp DEL   &lt 9 LANGUAGE_2  &lt 10 LANG1  &kp BSPC  &kp RET      &kp LEFT  &kp DOWN   &kp RIGHT
                          &kp RIGHT  &kp DOWN   &kp LEFT  &kp UP            &trans        &trans    &trans       &trans
             >;
