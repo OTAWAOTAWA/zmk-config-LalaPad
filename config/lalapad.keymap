@@ -253,11 +253,11 @@
         MOUSE_R_LAYER {
             display-name = "mouse_r_layer";
             bindings = <
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans
-&trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans
-                  &trans    &trans    &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans
+&trans  &to 7   &mkp MB1  &trans    &mkp MB2  &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans  &trans
+                &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
@@ -318,7 +318,7 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans  &trans
 &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans  &trans
-&trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans
+&trans  &to 7   &mkp MB1  &trans    &mkp MB2  &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans  &trans
                 &trans    &trans    &trans    &trans  &trans  &trans    &trans    &trans
             >;
