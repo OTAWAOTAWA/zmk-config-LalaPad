@@ -74,7 +74,7 @@
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 3 2>,
         //<&zip_temp_layer MOUSE_L_LAYER 500>;
-        <&zip_temp_layer SCROLL_L_LAYER 500>;
+        <&zip_temp_layer SCROLL_L_LAYER 300>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
@@ -89,7 +89,7 @@
         input-processors =
             <&zip_xy_to_scroll_mapper>,
             //<&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
+            <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_scroll_scaler 1 6>;
     };
 };
